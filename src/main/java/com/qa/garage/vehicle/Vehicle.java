@@ -49,7 +49,7 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
+		return "Vehicle [ID: " + this.id + "numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
 
 }
