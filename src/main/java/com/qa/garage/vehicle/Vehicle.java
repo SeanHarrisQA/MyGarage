@@ -6,10 +6,17 @@ public abstract class Vehicle {
 
 	private String colour;
 
-	private int id;
+	private static int count = 0;
+
+	private final int id;
 
 	public Vehicle(int numWheels, String colour) {
+		// Increment count which is static across all subclasses of vehicle and then set
+		// the id which is a final variable for each vehicle equal to count. SO you will
+		// have a set of vehicles with id starting at 1
 		super();
+		count++;
+		this.id = count;
 		this.numWheels = numWheels;
 		this.colour = colour;
 	}
@@ -20,9 +27,9 @@ public abstract class Vehicle {
 		return this.id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+//	public void setId(int id) {
+//		this.id = id;
+//	}
 
 	public int getNumWheels() {
 		return this.numWheels;
