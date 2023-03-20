@@ -1,6 +1,8 @@
 package com.qa.garage.vehicle;
 
-public abstract class Vehicle {
+import com.qa.garage.Billable;
+
+public abstract class Vehicle implements Billable {
 
 	private int numWheels;
 
@@ -21,15 +23,12 @@ public abstract class Vehicle {
 		this.colour = colour;
 	}
 
+	@Override
 	public abstract int calcBill();
 
 	public int getId() {
 		return this.id;
 	}
-
-//	public void setId(int id) {
-//		this.id = id;
-//	}
 
 	public int getNumWheels() {
 		return this.numWheels;
@@ -52,4 +51,7 @@ public abstract class Vehicle {
 		return "Vehicle [ID: " + this.id + "numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
 
+//	public void hypothesis() {
+//		System.out.println("Testing, testing...");
+//	}
 }

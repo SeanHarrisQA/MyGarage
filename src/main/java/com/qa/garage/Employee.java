@@ -1,6 +1,6 @@
 package com.qa.garage;
 
-public class Employee {
+public class Employee implements Billable {
 
 	private String name;
 	private int age;
@@ -40,5 +40,14 @@ public class Employee {
 	public void setSpecialism(String specialism) {
 		this.specialism = specialism;
 	}
+
+	@Override
+	public int calcBill() {
+		return (365 * 5 * 40) / 7;
+	}
+
+//	public void hypothesis() {
+//		System.out.println("Testing, testing...");
+//	}
 
 }
